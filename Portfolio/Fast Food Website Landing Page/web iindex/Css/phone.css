@@ -1,0 +1,30 @@
+/* Navigation section */
+.navbar{
+    flex-direction: column;
+    position: absolute;
+}
+.navbar::before{
+    content: "";
+    background: transparent;
+    position: relative;
+    z-index: -1;
+    
+}
+.navbar .nav-center li a {
+    
+    flex-direction: row;
+}
+
+/* Home section */
+/* Services section */
+#service-container{
+   flex-direction: column;
+}
+
+/* About us section */
+
+
+/* Contact us section */
+
+
+/* footer section */

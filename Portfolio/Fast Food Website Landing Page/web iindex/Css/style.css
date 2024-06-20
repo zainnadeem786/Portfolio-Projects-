@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(243 220 220);
+}
+
+/* Navigation bar Styling */
+.navbar {
+    display: flex;
+    position: sticky;
+    font-family: "Signika Negative", sans-serif;
+
+}
+
+.navbar::before {
+    content: "";
+    background-color: black;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* navigation bar img styling */
+.navbar img {
+    height: 120px;
+    width: 120px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* navigation bar list styling */
+.navbar ul {
+
+}
+
+.nav-center {
+    margin: 60px 35px;
+}
+
+.nav-center li {
+    display: inline;
+    flex-direction: row;
+    margin: 30px 15px;
+    padding: 10px;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    list-style: none;
+    
+}
+
+.nav-center li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Home section styling */
+#home {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url(./img/backgroundimgs/bg3.jpg) no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+    height: 70%;
+    width: 100%;
+    margin-top: -145px;
+    opacity: 0.9;
+    transition-duration: 35s;
+    animation-name: animation;
+    animation-duration: 35s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+
+}
+@keyframes animation {
+    0%{
+        background: url(./img/backgroundimgs/bg1.jpg) no-repeat center center/cover;
+
+    }
+    25%{
+    background: url(./img/backgroundimgs/bg2.jpg) no-repeat center center/cover;
+    }
+    50%{
+        background: url(./img/backgroundimgs/bg3.jpg) no-repeat center center/cover;
+    }
+    75%{
+        background: url(./img/backgroundimgs/bg4.jpg) no-repeat center center/cover;
+    }
+    100%{
+        background: url(./img/backgroundimgs/bg5.jpg) no-repeat center center/cover;
+    }
+}
+
+#home h1 {
+    padding: 20px;
+    margin: 15px 25px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-family: "Sedan SC", serif;
+}
+
+#home p {
+    padding: 10px 150px;
+    margin: auto;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+#home .btn {
+    margin: 5px 10px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    border: 2px solid white;
+    background-color: brown;
+}
+#home .btn:hover {
+  background-color: white;
+  border-color: brown;
+  color: black;
+ font-size: 12px; 
+ border-radius: 15px;
+}
+
+/* service styling  */
+#h-primary-center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-family: "Playfair Display", serif;
+}
+
+.box h2 {
+    margin: auto;
+    padding: 10pxs;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+#service {
+    margin: 20px;
+    display: flex;
+}
+
+#service .box {
+    border: 2px solid brown;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #fff4f4;
+}
+
+#service .box img {
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+#service .box p {
+    text-align: center;
+    padding: 15px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* about us styling */
+#about-us-container {}
+
+#about-us-container::before {
+    content: "";
+    background: url(./img/extraimgs/aboutbg.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 64%;
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+#about-us .box {
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 15px 20px;
+    border-radius: 20px;
+    background-color: #fff4f4;
+}
+
+#about-us {
+    margin: auto;
+    display: block;
+    padding: 50px 25px;
+    font-size: 20px;
+
+}
+
+#about-us h2 {
+    text-decoration: underline;
+
+}
+
+#about-us .box p {
+    text-align: center;
+    margin: 15px 25pxs;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+/* CONTACT US STYLING */
+#contact-us-container{
+    margin-top: -115px;
+    margin-bottom: 100px;
+    
+}
+#contact-us-container::before{
+    content: "";
+    position: absolute;
+    background: url(./img/extraimgs/contactbg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 55%;
+    z-index: -1;
+    opacity: 0.4;
+
+   
+}
+#contact-us {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#contact-us #contact {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 35px;
+    margin-left: 150px;
+    margin-left: 350px; 
+    
+}
+
+#contact-us #contact input {
+    display: block;
+    height: 40%;
+    width: 60%;
+    padding: 8px;
+    border-radius: 5px;
+    background: transparent;
+    
+}
+
+::placeholder {
+    width: 40%;
+    height: 60%;
+    font: bold;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    
+
+}
+
+#text {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.btn2 {
+    width: 15%;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn2:hover{
+    background: url(./img/extraimgs/contactbg.jpg);
+    border-color: black;
+}
+.contact-text{
+    font-size: 20px;
+
+}
+footer{
+    height: 90px;
+    /* background-color: rgba(243 220 220); */
+    text-align: center;
+}
+footer h3 {
+    margin-bottom: 30px;
+}
