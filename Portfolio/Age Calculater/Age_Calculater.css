@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:linear-gradient(#0056b3,#1aeeee,#007bff,#333);
+    margin: 0;
+}
+
+.container {
+    background:linear-gradient(#0056b3,#1aeeee,rgb(179, 170, 170));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(2, 6, 3, 0.1);
+    text-align: center;
+    
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="date"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: rgb(98, 255, 242);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    
+}
+
+.result {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.result.visible {
+    opacity: 1;
+}
