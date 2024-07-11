@@ -1,17 +1,31 @@
-from django.shortcuts import render 
+from django.shortcuts import render, redirect
+from .forms import ContactForm
+from .models import About, Product, Contact
+from django.shortcuts import render, get_object_or_404
+from .models import Product
 
-# Create your views here.
 def home(request):
-    return render (request,"index.html")
-
-def index(request):
-    return render (request,"index.html")
+    return render(request, 'index.html')
 
 def about(request):
-    return render (request,"about.html")
+    about_data = About.objects.all()
+    return render(request, 'about.html', {'about_data': about_data})
 
-def product(request):
-    return render (request,"product.html")
+
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
 
 def contact(request):
-    return render (request,"contact.html")
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contact_success')
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
+
+def contact_success(request):
+    return render(request, 'contact_success.html')
+
